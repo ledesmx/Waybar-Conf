@@ -1,0 +1,84 @@
+/* * {
+    blue    #ACE2E9
+    black   #1C1C24
+    geen    #D0E880
+    yellow  #FFDB77
+    red     #FF909E
+    gray    #D0DBDB
+} */
+
+* {
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    border-bottom: none;
+    color: #1C1C24;
+}
+
+tooltip {
+  background: #1C1C24;
+  opacity: .9;
+  border: none;
+  border-radius: 5;
+}
+tooltip label {
+  color: #D0DBDB;
+}
+
+#workspaces {
+    background-color: #ACE2E9;
+    border-radius: 5;
+}
+#workspaces button {
+    padding: 0 20px;
+    background: #ACE2E9;
+    color: #1C1C24;
+    border-radius: 5;
+}
+#workspaces button:hover {
+    background-color: #1C1C24;
+    color: #ACE2E9;
+}
+
+#workspaces button.focused {
+    background: #64727D;
+}
+
+#clock, #network, #wireplumber, #memory, #cpu {
+    padding: 0 20px;
+    border-radius: 5;
+    margin-right: 10;
+}
+
+#clock {
+    background-color: #D0E880;
+}
+
+#network {
+    background-color: #FFDB77;
+}
+
+#wireplumber {
+    background-color: #ACE2E9;
+}
+
+#memory {
+    background-color: #D0DBDB;
+}
+
+#cpu {
+    background-color: #FF909E;
+    margin-right: 0;
+}
+
+#workspaces button, #clock, #network, #wireplumber, #memory, #cpu {
+    padding-top: 4px;
+}
