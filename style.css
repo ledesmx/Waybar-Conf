@@ -1,10 +1,11 @@
 /* * {
-    blue    #ACE2E9
-    black   #1C1C24
-    geen    #D0E880
+    black   #12131A
+    white   #EEEEEE
+    green   #E6FF92
+    green2  #D9FFCC
     yellow  #FFDB77
-    red     #FF909E
-    gray    #D0DBDB
+    red     #FF6A7D
+    red2    #C0524C
 } */
 
 * {
@@ -13,7 +14,8 @@
     margin: 0;
     box-shadow: none;
     font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
+    font-weight: 700;
     min-height: 0;
 }
 
@@ -23,62 +25,58 @@ window#waybar {
     color: #1C1C24;
 }
 
-tooltip {
-  background: #1C1C24;
-  opacity: .9;
-  border: none;
-  border-radius: 5;
-}
-tooltip label {
-  color: #D0DBDB;
+#workspaces button, #clock, #network, #memory, #cpu, #pulseaudio-slider {
+    border-radius: 100;
+    background-color: #12131A;
+    color: #EEEEEE;
 }
 
-#workspaces {
-    background-color: #ACE2E9;
-    border-radius: 5;
-}
 #workspaces button {
-    padding: 0 20px;
-    background: #ACE2E9;
-    color: #1C1C24;
-    border-radius: 5;
-}
-#workspaces button:hover {
-    background-color: #1C1C24;
-    color: #ACE2E9;
-}
-
-#workspaces button.focused {
-    background: #64727D;
-}
-
-#clock, #network, #wireplumber, #memory, #cpu {
-    padding: 0 20px;
-    border-radius: 5;
+    padding: 0 5px;
     margin-right: 10;
 }
+#workspaces button:hover, #workspaces button.active {
+    background: linear-gradient(6deg, #FFDB77, #E6FF92);
+    color: #1C1C24;
+}
+/* #workspaces button.focused {
+    background: #64727D;
+} */
 
 #clock {
-    background-color: #D0E880;
+    background: linear-gradient(6deg, #D9FFCC, #E6FF92);
+    color: #12131A;
 }
 
-#network {
-    background-color: #FFDB77;
+#clock, #network, #wireplumber, #pulseaudio, #memory, #cpu, #pulseaudio-slider {
+    padding: 0 15px;
+    margin-left: 10;
 }
 
-#wireplumber {
-    background-color: #ACE2E9;
-}
-
-#memory {
-    background-color: #D0DBDB;
-}
-
-#cpu {
-    background-color: #FF909E;
-    margin-right: 0;
-}
-
-#workspaces button, #clock, #network, #wireplumber, #memory, #cpu {
+#workspaces button, #clock, #network, #memory, #cpu {
     padding-top: 4px;
+}
+
+#pulseaudio-slider {
+    padding-top: 2px;
+}
+#pulseaudio-slider slider {
+    min-height: 0px;
+    min-width: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+#pulseaudio-slider trough {
+    min-height: 10px;
+    min-width: 80px;
+    border-radius: 20px;
+    background-color: #EEEEEE;
+}
+#pulseaudio-slider highlight {
+    /* min-width: 0px; */
+    min-height: 10px;
+    border-radius: 20px;
+    background: linear-gradient(6deg, #FF6A7D, #C0524C);
 }
