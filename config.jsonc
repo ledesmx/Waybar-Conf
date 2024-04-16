@@ -1,5 +1,5 @@
 {
-    "layer": "bottom",
+    "layer": "top",
     "position": "top",
     "height": 25,
     "margin-top": 6,
@@ -61,17 +61,17 @@
    },
    "custom/poweroff": {
         "format": "⏻",
-        "on-click": "systemctl poweroff",
+        "on-click": "~/.config/waybar/scripts/power.sh poweroff",
         "tooltip": false
    },
    "custom/reboot": {
         "format": "↺",
-        "on-click": "systemctl reboot",
+        "on-click": "~/.config/waybar/scripts/power.sh reboot",
         "tooltip": false
    },
    "custom/suspend": {
         "format": "⏾",
-        "on-click": "systemctl suspend",
+        "on-click": "~/.config/waybar/scripts/power.sh suspend",
         "tooltip": false
    }
 }
