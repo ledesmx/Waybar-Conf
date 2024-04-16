@@ -52,6 +52,9 @@ window#waybar {
     padding: 0 15px;
     margin-left: 10;
 }
+#cpu {
+    margin-right: 10;
+}
 
 #workspaces button, #clock, #network, #memory, #cpu {
     padding-top: 4px;
@@ -79,4 +82,29 @@ window#waybar {
     min-height: 10px;
     border-radius: 20px;
     background: linear-gradient(6deg, #FF6A7D, #C0524C);
+}
+
+#power {
+    background-color: #12131A;
+    color: #EEEEEE;
+    border-radius: 100;
+    
+}
+#custom-poweroff {
+    font-size: 14px;
+    background: linear-gradient(6deg, #FFDB77, #E6FF92);
+    border-radius: 100;
+    color: #12131A;
+    padding: 0 7px;
+}
+
+#custom-reboot {
+    font-size: 18px;
+    margin-left: 2px;
+    margin-right: 7px;
+    padding: 0 8px;
+}
+#custom-suspend {
+    font-size: 14px ;
+    padding: 0 8px;
 }

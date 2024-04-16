@@ -8,7 +8,7 @@
     "margin-bottom": 0,
     "modules-left": [ "hyprland/workspaces" ],
     "modules-center": [ "clock"] ,
-    "modules-right": [ "pulseaudio/slider", "network", "memory", "cpu"],
+    "modules-right": [ "pulseaudio/slider", "network", "memory", "cpu", "group/power"],
     "hyprland/workspaces": {
         "persistent-workspaces": {
             "*": 3
@@ -39,11 +39,39 @@
         "interval": 1,
         "tooltip": false,
         "format": "{icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7}",
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
    },
    "pulseaudio/slider": {
     "min": 0,
     "max": 100,
     "orientation": "horizontal"
+   },
+   "group/power": {
+    "orientation": "horizontal",
+    "drawer": {
+        "transition-duration": 500,
+        "children-class": "power",
+        "transition-left-to-right": true
+    },
+    "modules": [
+        "custom/poweroff",
+        "custom/suspend",
+        "custom/reboot" 
+    ]
+   },
+   "custom/poweroff": {
+        "format": "⏻",
+        "on-click": "systemctl poweroff",
+        "tooltip": false
+   },
+   "custom/reboot": {
+        "format": "↺",
+        "on-click": "systemctl reboot",
+        "tooltip": false
+   },
+   "custom/suspend": {
+        "format": "⏾",
+        "on-click": "systemctl suspend",
+        "tooltip": false
    }
 }
