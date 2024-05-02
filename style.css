@@ -14,7 +14,7 @@
     margin: 0;
     box-shadow: none;
     font-family: Roboto, Helvetica, Arial, sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 700;
     min-height: 0;
 }
@@ -32,7 +32,8 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 6px;
+    padding-top: 4px;
     margin-right: 10px;
 }
 #workspaces button:hover, #workspaces button.active {
@@ -47,9 +48,11 @@ window#waybar {
     background: linear-gradient(6deg, #D9FFCC, #E6FF92);
     color: #12131A;
     font-size: 14px;
+    padding: 0 15px;
+    padding-top: 4px;
 }
 
-#clock, #network, #wireplumber, #pulseaudio, #memory, #cpu, #pulseaudio-slider {
+#network, #memory, #cpu, #pulseaudio-slider {
     padding: 0 15px;
     margin-left: 10px;
 }
@@ -57,12 +60,12 @@ window#waybar {
     margin-right: 10px;
 }
 
-#workspaces button, #clock, #network, #memory, #cpu {
-    padding-top: 4px;
+#network, #memory, #cpu {
+    padding-top: 3px;
 }
 
 #pulseaudio-slider {
-    padding-top: 2px;
+    padding-top: 1px;
 }
 #pulseaudio-slider slider {
     min-height: 0;
