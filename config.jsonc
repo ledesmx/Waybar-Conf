@@ -1,14 +1,14 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 25,
+    "height": 28,
     "margin-top": 6,
     "margin-left": 6,
     "margin-right": 6,
     "margin-bottom": 0,
     "modules-left": [ "hyprland/workspaces" ],
     "modules-center": [ "clock"] ,
-    "modules-right": [ "pulseaudio/slider", "network", "memory", "cpu", "group/power"],
+    "modules-right": [ "custom/pomodoro", "pulseaudio/slider", "network", "memory", "cpu", "group/power"],
     "hyprland/workspaces": {
         "persistent-workspaces": {
             "*": 3
@@ -46,6 +46,13 @@
     "max": 100,
     "orientation": "horizontal"
    },
+   "custom/pomodoro": {
+    "return-type": "json",
+    "exec": "~/.config/waybar/scripts/pomodoro.sh",
+    "on-click": "kill -10 $(pgrep pomodoro)",
+    "on-click-right": "sed -i 's/^status=.*$/status=reseted/' ~/.config/waybar/scripts/pomodoro_status",
+    "on-click-middle": "kill -12 $(pgrep pomodoro)"
+    },
    "group/power": {
     "orientation": "horizontal",
     "drawer": {

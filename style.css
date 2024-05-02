@@ -26,14 +26,14 @@ window#waybar {
 }
 
 #workspaces button, #clock, #network, #memory, #cpu, #pulseaudio-slider {
-    border-radius: 100;
+    border-radius: 100px;
     background-color: #12131A;
     color: #EEEEEE;
 }
 
 #workspaces button {
     padding: 0 5px;
-    margin-right: 10;
+    margin-right: 10px;
 }
 #workspaces button:hover, #workspaces button.active {
     background: linear-gradient(6deg, #FFDB77, #E6FF92);
@@ -46,14 +46,15 @@ window#waybar {
 #clock {
     background: linear-gradient(6deg, #D9FFCC, #E6FF92);
     color: #12131A;
+    font-size: 14px;
 }
 
 #clock, #network, #wireplumber, #pulseaudio, #memory, #cpu, #pulseaudio-slider {
     padding: 0 15px;
-    margin-left: 10;
+    margin-left: 10px;
 }
 #cpu {
-    margin-right: 10;
+    margin-right: 10px;
 }
 
 #workspaces button, #clock, #network, #memory, #cpu {
@@ -64,8 +65,8 @@ window#waybar {
     padding-top: 2px;
 }
 #pulseaudio-slider slider {
-    min-height: 0px;
-    min-width: 0px;
+    min-height: 0;
+    min-width: 0;
     opacity: 0;
     background-image: none;
     border: none;
@@ -87,13 +88,13 @@ window#waybar {
 #power {
     background-color: #12131A;
     color: #EEEEEE;
-    border-radius: 100;
+    border-radius: 100px;
     
 }
 #custom-poweroff {
     font-size: 14px;
     background: linear-gradient(6deg, #FFDB77, #E6FF92);
-    border-radius: 100;
+    border-radius: 100px;
     color: #12131A;
     padding: 0 7px;
 }
@@ -107,4 +108,24 @@ window#waybar {
 #custom-suspend {
     font-size: 14px ;
     padding: 0 8px;
+}
+.pomo--work, .pomo--work--off, .pomo--break, .pomo--break--off {
+    font-size: 14px;
+    border-radius: 100px;
+    background-color: #12131A;
+    padding: 0 15px;
+    padding-top: 4px;
+    margin-left: 10px;
+}
+.pomo--work {
+    color: #E6FF92;
+}
+.pomo--work--off {
+    color: #AEBE78;
+}
+.pomo--break {
+    color: #FFE59E;
+}
+.pomo--break--off {
+    color: #B9A570;
 }
