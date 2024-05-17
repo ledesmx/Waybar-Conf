@@ -11,8 +11,9 @@
     "modules-right": [ "custom/pomodoro", "pulseaudio/slider", "network", "memory", "cpu", "group/power"],
     "hyprland/workspaces": {
         "persistent-workspaces": {
-            "*": 3
-        }
+            "*": 4
+        },
+        "sort-by": "id"
     },
     "sway/window": {
         "max-length": 50

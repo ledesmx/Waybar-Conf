@@ -32,7 +32,7 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 0 6px;
+    padding: 0 15px;
     padding-top: 4px;
     margin-right: 10px;
 }
@@ -43,6 +43,11 @@ window#waybar {
 /* #workspaces button.focused {
     background: #64727D;
 } */
+#workspaces button.persistent {
+    padding: 0 6px;
+    padding-top: 4px;
+    margin-right: 10px;
+}
 
 #clock {
     background: linear-gradient(6deg, #D9FFCC, #E6FF92);
@@ -115,20 +120,23 @@ window#waybar {
 .pomo--work, .pomo--work--off, .pomo--break, .pomo--break--off {
     font-size: 14px;
     border-radius: 100px;
-    background-color: #12131A;
     padding: 0 15px;
     padding-top: 4px;
     margin-left: 10px;
 }
 .pomo--work {
-    color: #E6FF92;
+    background-color: #E6FF92;
+    color: #12131A;
 }
 .pomo--work--off {
-    color: #AEBE78;
+    background-color: #12131A;
+    color: #E6FF92;
 }
 .pomo--break {
-    color: #FFE59E;
+    background-color: #FFE59E;
+    color: #12131A;
 }
 .pomo--break--off {
-    color: #B9A570;
+    background-color: #12131A;
+    color: #FFE59E;
 }
