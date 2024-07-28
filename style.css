@@ -1,77 +1,78 @@
 /* * {
-    black   #12131A
+    black   #090909
     white   #EEEEEE
-    green   #E6FF92
-    green2  #D9FFCC
-    yellow  #FFDB77
-    red     #FF6A7D
-    red2    #C0524C
+    pink    #DBB4F0
+    purple  #CAB6FF
+    blue    #96EAFF
+
+    audio slider
+    white   #726576
 } */
 
 * {
     border: none;
     border-radius: 0;
     margin: 0;
+    padding: 0;
     box-shadow: none;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: '0xProto Nerd Font', Roboto, Arial, sans-serif;
     font-size: 13px;
     font-weight: 700;
     min-height: 0;
 }
 
 window#waybar {
-    background: transparent;
     border-bottom: none;
-    color: #1C1C24;
-}
-
-#workspaces button, #clock, #network, #memory, #cpu, #pulseaudio-slider {
-    border-radius: 100px;
-    background-color: #12131A;
     color: #EEEEEE;
+    background: rgba(16, 16, 12, 0.93);
+    border: 2px solid #0A0012;
+    border-radius: 5;
 }
 
+#workspaces {
+  margin-top: 10px;
+}
 #workspaces button {
-    padding: 0 15px;
-    padding-top: 4px;
-    margin-right: 10px;
+    color: #EEEEEE;
+    padding: 5px 0;
+    transition-duration: .2s;
 }
-#workspaces button:hover, #workspaces button.active {
-    background: linear-gradient(6deg, #FFDB77, #E6FF92);
-    color: #1C1C24;
+#workspaces button.active {
+    background: linear-gradient(90deg, #CAB6FF, #E5B1E4);
+    color: #090909;
 }
-/* #workspaces button.focused {
-    background: #64727D;
-} */
+#workspaces button:hover {
+    background: #FFFFFF;
+    color: #090909;
+}
 #workspaces button.persistent {
-    padding: 0 6px;
-    padding-top: 4px;
-    margin-right: 10px;
 }
 
-#clock {
-    background: linear-gradient(6deg, #D9FFCC, #E6FF92);
-    color: #12131A;
+#clock.time {
+    color: #FFFFFF;
+    font-size: 35px;
+    margin-bottom: 10px;
+    margin-right: 4px;
+    /*padding-top: 4px;*/
+}
+#clock.day {
+    color: #FFFFFF;
     font-size: 14px;
-    padding: 0 15px;
-    padding-top: 4px;
+    margin-bottom: 7px;
 }
 
-#network, #memory, #cpu, #pulseaudio-slider {
-    padding: 0 15px;
-    margin-left: 10px;
+#memory, #network {
+    font-size: 11;
+    color: #FFFFFF;
+    margin-bottom: 8px;
 }
 #cpu {
-    margin-right: 10px;
+    font-size: 11;
+    color: #FFFFFF;
+    margin-bottom: 15px;
 }
 
-#network, #memory, #cpu {
-    padding-top: 3px;
-}
 
-#pulseaudio-slider {
-    padding-top: 1px;
-}
 #pulseaudio-slider slider {
     min-height: 0;
     min-width: 0;
@@ -81,62 +82,58 @@ window#waybar {
     box-shadow: none;
 }
 #pulseaudio-slider trough {
-    min-height: 10px;
-    min-width: 80px;
-    border-radius: 20px;
-    background-color: #EEEEEE;
+    min-height: 100px;
+    min-width: 14px;
+    border-radius: 5px;
+    background-color: #726576;
 }
 #pulseaudio-slider highlight {
-    /* min-width: 0px; */
-    min-height: 10px;
-    border-radius: 20px;
-    background: linear-gradient(6deg, #FF6A7D, #C0524C);
+    min-width: 14px;
+    /* min-height: 10px; */
+    border-radius: 5px;
+    background: linear-gradient(90deg, #CAB6FF, #E5B1E4);
 }
 
-#power {
-    background-color: #12131A;
+#custom-poweroff, #custom-reboot, #custom-suspend {
     color: #EEEEEE;
-    border-radius: 100px;
-    
+    font-size: 20px;
+    margin: 0 10px;
+    transition-duration: .2s;
+}
+#custom-poweroff:hover, #custom-reboot:hover, #custom-suspend:hover {
+    color: #DBB4F0;
 }
 #custom-poweroff {
-    font-size: 14px;
-    background: linear-gradient(6deg, #FFDB77, #E6FF92);
-    border-radius: 100px;
-    color: #12131A;
-    padding: 0 7px;
+    margin-bottom: 20px;
+    margin-right: 15px;
 }
 
 #custom-reboot {
-    font-size: 18px;
-    margin-left: 2px;
-    margin-right: 7px;
-    padding: 0 8px;
+  font-size: 25px;
 }
 #custom-suspend {
-    font-size: 14px ;
-    padding: 0 8px;
+  margin-bottom: 2px;
 }
 .pomo--work, .pomo--work--off, .pomo--break, .pomo--break--off {
     font-size: 14px;
-    border-radius: 100px;
-    padding: 0 15px;
-    padding-top: 4px;
-    margin-left: 10px;
+    border-radius: 3px;
+    padding: 10px 0;
+    padding-left: 3px;
+    margin: 20px 6px;
 }
 .pomo--work {
-    background-color: #E6FF92;
-    color: #12131A;
+    color: #96EAFF;
+    border: 2px solid #96EAFF;
 }
 .pomo--work--off {
-    background-color: #12131A;
-    color: #E6FF92;
+    color: #96EAFF;
+    border: 2px solid #FFFFFF;
 }
 .pomo--break {
-    background-color: #FFE59E;
-    color: #12131A;
+    color: #DBB4F0;
+    border: 2px solid #DBB4F0;
 }
 .pomo--break--off {
-    background-color: #12131A;
-    color: #FFE59E;
+    color: #DBB4F0;
+    border: 2px solid #FFFFFF;
 }

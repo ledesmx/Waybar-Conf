@@ -1,31 +1,37 @@
 {
     "layer": "top",
-    "position": "top",
-    "height": 28,
+    "position": "left",
+    "mode": "dock",
+    "start_hidden": true,
     "margin-top": 6,
     "margin-left": 6,
-    "margin-right": 6,
-    "margin-bottom": 0,
+    "margin-right": 0,
+    "margin-bottom": 6,
     "modules-left": [ "hyprland/workspaces" ],
-    "modules-center": [ "clock"] ,
-    "modules-right": [ "custom/pomodoro", "pulseaudio/slider", "network", "memory", "cpu", "group/power"],
+    "modules-right": [ "pulseaudio/slider", "custom/pomodoro", "network", "memory", "cpu", "clock#day", "clock#time", "group/power" ],
     "hyprland/workspaces": {
         "persistent-workspaces": {
-            "*": 4
+            "*": 0
         },
         "sort-by": "id"
     },
     "sway/window": {
         "max-length": 50
     },
-    "clock": {
-        "format": "{:%I:%M %p  -  %m/%d/%y}",
-        "tooltip": false
+    "clock#time": {
+        "format": "{:%I:%M}",
+        "tooltip": false,
+        "rotate": 90
+    },
+    "clock#day": {
+        "format": "{:%A, %B %d}",
+        "tooltip": false,
+        "rotate": 90
     },
     "network": {
         "interface": "wlp4s0",
         "format": "{ifname}",
-        "format-wifi": " {essid}",
+        "format-wifi": " {signalStrength}",
         "format-ethernet": "{ipaddr}/{cidr} 󰊗",
         "format-disconnected": "Disconnected",
         "max-length": 50,
@@ -34,37 +40,32 @@
     "memory": {
         "interval": 30,
         "tooltip": false,
-        "format": " {}%"
+        "format": " {}"
     },
     "cpu": {
         "interval": 1,
         "tooltip": false,
-        "format": "{icon0} {icon1} {icon2} {icon3} {icon4} {icon5} {icon6} {icon7}",
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"]
+        "format": " 10",
    },
    "pulseaudio/slider": {
     "min": 0,
     "max": 100,
-    "orientation": "horizontal"
+    "orientation": "vertical"
    },
    "custom/pomodoro": {
     "return-type": "json",
+    "rotate": 90,
     "exec": "~/.config/waybar/scripts/pomodoro.sh",
     "on-click": "kill -10 $(pgrep pomodoro)",
     "on-click-right": "sed -i 's/^status=.*$/status=reseted/' ~/.config/waybar/scripts/pomodoro_status",
     "on-click-middle": "kill -12 $(pgrep pomodoro)"
     },
    "group/power": {
-    "orientation": "horizontal",
-    "drawer": {
-        "transition-duration": 500,
-        "children-class": "power",
-        "transition-left-to-right": true
-    },
+    "orientation": "vertical",
     "modules": [
-        "custom/poweroff",
         "custom/suspend",
-        "custom/reboot" 
+        "custom/reboot" ,
+        "custom/poweroff",
     ]
    },
    "custom/poweroff": {
